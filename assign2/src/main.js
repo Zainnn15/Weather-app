@@ -68,10 +68,12 @@ function Main() {
         setData(obj);
     }
 
+
+
     return (
-        <div className="container-fluid mainBody">
+        <div className="mainBody">
             <div className="row">
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <nav className="navbar navbar-expand-lg bg-dark">
                     <a className="navbar-brand" href="#">Weather App_v2</a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -95,25 +97,25 @@ function Main() {
                 </nav>
             </div>
 
-        
-
-            <h2 className="mt-4">{new Date().toString()}</h2>
-            <h4>{error}</h4>
-            <div className="row mt-2">
+            <h2 className="mt-4" class='time'>{new Date().toLocaleDateString()}</h2>
+            <div>
                 {b && <div className="col-11 ml-5">
                     <h2>{data.name}, {data.sys.country}, <img style={{ width: '50px', height: '30px', objectFit: 'cover' }} src={`http://openweathermap.org/images/flags/${data.sys.country.toLowerCase()}.png`} /></h2>
+                    <p className='temperature'><strong>Temperature</strong>: {data.main.temp}&deg;C</p>
                     <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}.png`} />
                     <p className='city'>{data.weather[0].description}</p>
-                    <p className='temperature'><strong>Temperature</strong>: {data.main.temp}&deg;C</p>
-                    <span style={{display: 'none'}} id='toShow'>
-                        <p><strong>Pressure</strong>:       {data.main.pressure}hPa</p>
-                        <p><strong>Min Temperature</strong>: {data.main.temp_min}&deg;C</p>
-                        <p><strong>Max Temperature</strong>: {data.main.temp_max}&deg;C</p>
-                        <p><strong>Wind Speed</strong>:     {data.wind.speed}m/s</p>
-                        <p><strong>Longitude</strong>: {data.coord.lon}</p>
-                        <p><strong>Latitude</strong>: {data.coord.lat}</p>
-                        <p><strong>Sunset</strong>: {(new Date(data.sys.sunset * 1000)).toLocaleTimeString()}</p>
-                        <p><strong>Sunrise</strong>: {(new Date(data.sys.sunrise * 1000)).toLocaleTimeString()}</p>
+                
+                    <span style={{border: '15px'}} id='toShow'>
+                        <div class='bod'>
+                        <h3><strong>Pressure</strong>:       {data.main.pressure}hPa</h3>
+                        <h3><strong>Min Temperature</strong>: {data.main.temp_min}&deg;C</h3>
+                        <h3><strong>Max Temperature</strong>: {data.main.temp_max}&deg;C</h3>
+                        <h3><strong>Wind Speed</strong>:     {data.wind.speed}m/s</h3>
+                        <h3><strong>Longitude</strong>: {data.coord.lon}</h3>
+                        <h3><strong>Latitude</strong>: {data.coord.lat}</h3>
+                        <h3><strong>Sunset</strong>: {(new Date(data.sys.sunset * 1000)).toLocaleTimeString()}</h3>
+                        <h3><strong>Sunrise</strong>: {(new Date(data.sys.sunrise * 1000)).toLocaleTimeString()}</h3>
+                        </div>
                     </span><br/>
                 </div>}
                 {}

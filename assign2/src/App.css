@@ -29,6 +29,14 @@
 }
 
 
+.bi{
+  box-sizing: border-box;
+  width: 35%;
+  border: solid #000000 10px;
+  padding: 60px;
+  position: fixed;
+}
+
 body {
   overflow-x: hidden;
   color: rgb(253, 251, 251);
@@ -40,7 +48,7 @@ body {
   align-items: center;
   height: 1000px;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   background: rgb(14, 199, 231);
   font-size: 120%;
 }
@@ -52,20 +60,35 @@ body {
   overflow-y: hidden;
 }
 
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 html{
 scroll-behavior: smooth;
 }
 
+.bod{
+  box-sizing: border-box;
+  width: 25%;
+  border: solid #5B6DCD 10px;
+padding: 10px;
+  position: fixed;
+  left: 20%;
+}
+
+
+.time{
+height: 200px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+div{
+  box-sizing: content-box;
+  
+}
+
+nav {
+  background-color: #333;
+  margin: 0;
+  overflow: hidden;
+}
 
 /*#show{
     margin: auto;
