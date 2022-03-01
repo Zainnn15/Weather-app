@@ -36,7 +36,7 @@ function Main() {
         }
         else {
             $.ajax({ 
-                url: "https://geolocation-db.com/jsonp/d802faa0-10bd-11ec-b2fe-47a0872c6708/192.82.150.223",
+                url: "https://geolocation-db.com/jsonp/d802faa0-10bd-11ec-b2fe-47a0872c6708",
                 jsonpCallback: "callback",
                 dataType: "jsonp",
                 success: function (location) {
